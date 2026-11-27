@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263d31">
+  <meta name="robots" content="noindex,nofollow">
+  <title>إدارة سُفرة | طلبات المطاعم</title>
+  <style>
+    :root{--green:#263d31;--green2:#385540;--gold:#9b805b;--cream:#faf9f5;--paper:#fffefa;--muted:#7b8377;--line:#e9e7df;--sage:#edf1e9;--red:#a43e32;--shadow:0 18px 50px rgba(38,61,49,.09)}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:#28332a;font-family:Tahoma,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.6;cursor:not-allowed}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.top{background:#fffefa;border-bottom:1px solid var(--line)}.top-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px}.mark{width:42px;height:42px;border-radius:14px;background:var(--green);display:grid;place-items:center;color:#fff;font-size:21px;font-weight:900}.brand b{display:block;font-size:20px;color:var(--green)}.brand small{display:block;color:#92988d;font-size:9px;letter-spacing:2px;margin-top:4px}.top-actions{display:flex;align-items:center;gap:12px}.email{font-size:11px;color:#6e776c;direction:ltr}.btn{border:0;border-radius:11px;padding:11px 16px;font-size:12px;font-weight:800}.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:var(--green2)}.btn-light{background:#fff;border:1px solid var(--line);color:#52634f}.main{padding:38px 0 65px}.page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:25px}.eyebrow{font-size:10px;font-weight:900;letter-spacing:1.5px;color:var(--gold)}h1{margin:9px 0 0;color:var(--green);font-size:30px}.sub{margin:9px 0 0;font-size:12px;line-height:1.9;color:#7e867a}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:23px 0}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}.stat span{display:block;font-size:11px;color:#81897e}.stat b{display:block;font-size:27px;color:var(--green);margin-top:8px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.tools{padding:16px;display:flex;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line)}.tools input,.tools select,.field input{border:1px solid #e1e5dc;background:#fff;border-radius:10px;padding:11px 12px;color:#303b31;font-size:12px}.tools input{flex:1;min-width:190px}.tools select{min-width:155px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:880px}th,td{padding:14px 13px;text-align:right;border-bottom:1px solid #efeee8;font-size:11px;vertical-align:middle}th{background:#fafaf6;color:#707a6e;font-size:10px;white-space:nowrap}td{color:#384439}tbody tr:last-child td{border-bottom:0}.restaurant{font-weight:900;color:var(--green);font-size:12px}.small{display:block;color:#8b9286;font-size:10px;margin-top:5px}.contact{direction:ltr;display:inline-block;color:#536e50}.status{min-width:125px;border:1px solid #e2e5dd;border-radius:9px;padding:8px;background:#fff;color:#405040;font-size:11px}.pill{display:inline-block;border-radius:20px;padding:6px 9px;background:#f0f1eb;color:#566451;font-size:10px;font-weight:800}.empty,.loading{padding:38px 16px;text-align:center;color:#8a9186;font-size:12px}.notice{display:none;margin:0 0 15px;padding:12px 14px;border-radius:11px;font-size:11px;line-height:1.8}.notice.error{display:block;background:#fff0ed;color:#943b30}.notice.success{display:block;background:#edf4e9;color:#496844}.login-shell{min-height:calc(100vh - 77px);display:grid;place-items:center;padding:35px 0}.login{width:min(440px,100%);padding:29px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.login h1{font-size:24px;margin:0}.login p{font-size:11px;line-height:1.9;color:#858c80;margin:10px 0 23px}.field{display:block;margin:15px 0;font-size:11px;color:#52604f;font-weight:800}.field input{width:100%;display:block;margin-top:8px;padding:13px}.login .btn{width:100%;margin-top:8px;padding:13px}.login .linkbtn{display:block;width:100%;margin-top:13px;border:0;background:transparent;color:#64785e;font-size:11px;font-weight:800;text-decoration:underline;padding:8px}.footer-note{text-align:center;color:#9aa094;font-size:10px;margin-top:17px}.hidden{display:none!important}.foot{padding:18px 0;border-top:1px solid var(--line);text-align:center;color:#9a9f95;font-size:10px}
+    @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.page-head{align-items:flex-start;flex-direction:column}h1{font-size:25px}.top-inner{min-height:68px}.email{display:none}.main{padding-top:27px}.panel{border-radius:14px}}
+    @media(max-width:420px){.wrap{width:calc(100% - 22px)}.stats{gap:8px}.stat{padding:13px}.stat b{font-size:23px}.tools>*{width:100%}.tools input{min-width:0}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div class="brand"><span class="mark">س</span><span><b>سُفرة</b><small>SOFRA · ADMIN</small></span></div>
+      <div id="topActions" class="top-actions hidden"><span id="adminEmail" class="email"></span><button id="logoutBtn" class="btn btn-light" type="button">تسجيل الخروج</button></div>
+    </div>
+  </header>
+
+  <main id="loginView" class="wrap login-shell">
+    <section class="login">
+      <div class="eyebrow">SOFRA PLATFORM</div>
+      <h1>دخول مدير المنصة</h1>
+      <p>هذه الصفحة مخصصة لإدارة طلبات المطاعم في منصة سُفرة. سجّل الدخول بحساب مدير المنصة الذي أنشأته في Supabase.</p>
+      <div id="loginNotice" class="notice" role="alert"></div>
+      <form id="loginForm">
+        <label class="field">البريد الإلكتروني<input id="email" type="email" autocomplete="username" required placeholder="name@example.com"></label>
+        <label class="field">كلمة المرور<input id="password" type="password" autocomplete="current-password" required placeholder="كلمة مرور حسابك"></label>
+        <button id="loginBtn" class="btn btn-primary" type="submit">تسجيل الدخول</button>
+      </form>
+      <button id="forgotPasswordBtn" class="linkbtn" type="button">نسيت كلمة المرور؟</button>
+      <form id="recoveryForm" class="hidden">
+        <p>أدخل كلمة مرور جديدة بعد فتح رابط الاستعادة الذي سيصلك عبر البريد الإلكتروني.</p>
+        <div id="recoveryNotice" class="notice" role="status"></div>
+        <label class="field">كلمة المرور الجديدة<input id="newPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="8 أحرف على الأقل"></label>
+        <label class="field">تأكيد كلمة المرور<input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="أعد كتابة كلمة المرور"></label>
+        <button id="savePasswordBtn" class="btn btn-primary" type="submit">حفظ كلمة المرور الجديدة</button>
+      </form>
+      <div class="footer-note">لا يوجد إنشاء حساب من هذه الصفحة.</div>
+    </section>
+  </main>
+
+  <main id="dashboardView" class="wrap main hidden">
+    <div class="page-head">
+      <div><div class="eyebrow">PLATFORM MANAGEMENT</div><h1>طلبات المطاعم</h1><p class="sub">راجع الطلبات الواردة وحدّث حالتها. لا تظهر هذه البيانات إلا لحسابات مدير المنصة المصرّح لها.</p></div>
+      <button id="refreshBtn" class="btn btn-light" type="button">تحديث الطلبات</button>
+    </div>
+    <div id="dashboardNotice" class="notice" role="status"></div>
+    <section class="stats" aria-label="ملخص الطلبات">
+      <div class="stat"><span>إجمالي الطلبات</span><b id="totalCount">—</b></div>
+      <div class="stat"><span>طلبات جديدة</span><b id="newCount">—</b></div>
+      <div class="stat"><span>تم التواصل</span><b id="contactedCount">—</b></div>
+      <div class="stat"><span>طلبات مقبولة</span><b id="approvedCount">—</b></div>
+    </section>
+    <section class="panel">
+      <div class="tools">
+        <input id="searchInput" type="search" placeholder="ابحث باسم المطعم أو المدينة أو وسيلة التواصل" aria-label="بحث">
+        <select id="statusFilter" aria-label="تصفية حسب الحالة">
+          <option value="all">كل الحالات</option><option value="new">جديد</option><option value="contacted">تم التواصل</option><option value="approved">مقبول</option><option value="rejected">مرفوض</option>
+        </select>
+        <select id="planFilter" aria-label="تصفية حسب الباقة">
+          <option value="all">كل الباقات</option><option value="basic">الأساسية</option><option value="loyalty">الولاء</option><option value="smart">التواصل الذكي</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>المطعم</th><th>نوع النشاط</th><th>المدينة</th><th>التواصل</th><th>الباقة</th><th>تاريخ الطلب</th><th>الحالة</th></tr></thead>
+          <tbody id="requestsBody"><tr><td colspan="7" class="loading">جارٍ تحميل الطلبات...</td></tr></tbody>
+        </table>
+      </div>
+      <div id="emptyState" class="empty hidden">لا توجد طلبات مطابقة للبحث.</div>
+    </section>
+  </main>
+
+  <footer class="foot">© 2026 سُفرة SOFRA · لوحة إدارة المنصة</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Use the same Project URL and Publishable key as the public SOFRA website.
+    // Never place a Secret key or service_role key in this file.
+    const SOFRA_SUPABASE_URL = "";
+    const SOFRA_SUPABASE_PUBLISHABLE_KEY = "";
+
+    const loginView = document.getElementById('loginView');
+    const dashboardView = document.getElementById('dashboardView');
+    const loginNotice = document.getElementById('loginNotice');
+    const dashboardNotice = document.getElementById('dashboardNotice');
+    const requestsBody = document.getElementById('requestsBody');
+    const emptyState = document.getElementById('emptyState');
+    const loginBtn = document.getElementById('loginBtn');
+    const loginForm = document.getElementById('loginForm');
+    const recoveryForm = document.getElementById('recoveryForm');
+    const recoveryNotice = document.getElementById('recoveryNotice');
+    const forgotPasswordBtn = document.getElementById('forgotPasswordBtn');
+    let client = null;
+    let currentRequests = [];
+    let currentUser = null;
+
+    const statusLabels = {new:'جديد', contacted:'تم التواصل', approved:'مقبول', rejected:'مرفوض'};
+    const planLabels = {basic:'الأساسية', loyalty:'الولاء', smart:'التواصل الذكي'};
+
+    function showNotice(element, message, type='error') {
+      element.textContent = message;
+      element.className = 'notice ' + type;
+    }
+    function clearNotice(element) {
+      element.textContent = '';
+      element.className = 'notice';
+    }
+    function showLogin() {
+      loginView.classList.remove('hidden');
+      dashboardView.classList.add('hidden');
+      document.getElementById('topActions').classList.add('hidden');
+    }
+    function showDashboard(user) {
+      currentUser = user;
+      loginView.classList.add('hidden');
+      dashboardView.classList.remove('hidden');
+      document.getElementById('topActions').classList.remove('hidden');
+      document.getElementById('adminEmail').textContent = user.email || '';
+    }
+    function formatDate(value) {
+      if (!value) return '—';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return '—';
+      return new Intl.DateTimeFormat('ar-SY', {dateStyle:'medium', timeStyle:'short'}).format(date);
+    }
+    function makeCell(text, className='') {
+      const cell = document.createElement('td');
+      if (className) cell.className = className;
+      cell.textContent = text == null || text === '' ? '—' : String(text);
+      return cell;
+    }
+    function updateCounts(rows) {
+      document.getElementById('totalCount').textContent = rows.length;
+      document.getElementById('newCount').textContent = rows.filter(r => r.status === 'new').length;
+      document.getElementById('contactedCount').textContent = rows.filter(r => r.status === 'contacted').length;
+      document.getElementById('approvedCount').textContent = rows.filter(r => r.status === 'approved').length;
+    }
+    function visibleRequests() {
+      const q = document.getElementById('searchInput').value.trim().toLocaleLowerCase('ar');
+      const status = document.getElementById('statusFilter').value;
+      const plan = document.getElementById('planFilter').value;
+      return currentRequests.filter(r => {
+        const haystack = [r.restaurant_name, r.city, r.contact, r.business_type].join(' ').toLocaleLowerCase('ar');
+        return (!q || haystack.includes(q)) && (status === 'all' || r.status === status) && (plan === 'all' || r.plan_id === plan);
+      });
+    }
+    function renderRequests() {
+      const rows = visibleRequests();
+      requestsBody.replaceChildren();
+      emptyState.classList.toggle('hidden', rows.length !== 0);
+      if (!rows.length) return;
+
+      for (const request of rows) {
+        const tr = document.createElement('tr');
+        const restaurantCell = document.createElement('td');
+        const restaurantName = document.createElement('span');
+        restaurantName.className = 'restaurant';
+        restaurantName.textContent = request.restaurant_name || '—';
+        const idHint = document.createElement('span');
+        idHint.className = 'small';
+        idHint.textContent = String(request.id || '').slice(0,8);
+        restaurantCell.append(restaurantName, idHint);
+        tr.appendChild(restaurantCell);
+        tr.appendChild(makeCell(request.business_type));
+        tr.appendChild(makeCell(request.city));
+
+        const contactCell = document.createElement('td');
+        const contactLink = document.createElement('a');
+        contactLink.className = 'contact';
+        contactLink.textContent = request.contact || '—';
+        if (request.contact && /^[+0-9()\-\s]+$/.test(request.contact)) {
+          contactLink.href = 'tel:' + request.contact.replace(/[^+0-9]/g, '');
+        }
+        contactCell.appendChild(contactLink);
+        tr.appendChild(contactCell);
+        tr.appendChild(makeCell(planLabels[request.plan_id] || request.plan_id));
+        tr.appendChild(makeCell(formatDate(request.created_at)));
+
+        const statusCell = document.createElement('td');
+        const statusSelect = document.createElement('select');
+        statusSelect.className = 'status';
+        statusSelect.setAttribute('aria-label', 'تغيير حالة طلب ' + (request.restaurant_name || ''));
+        for (const [value, label] of Object.entries(statusLabels)) {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = label;
+          statusSelect.appendChild(option);
+        }
+        statusSelect.value = request.status;
+        statusSelect.dataset.requestId = request.id;
+        statusSelect.addEventListener('change', changeRequestStatus);
+        statusCell.appendChild(statusSelect);
+        tr.appendChild(statusCell);
+        requestsBody.appendChild(tr);
+      }
+    }
+    async function loadRequests() {
+      clearNotice(dashboardNotice);
+      requestsBody.innerHTML = '<tr><td colspan="7" class="loading">جارٍ تحميل الطلبات...</td></tr>';
+      emptyState.classList.add('hidden');
+      const {data, error} = await client
+        .from('restaurant_requests')
+        .select('id,restaurant_name,business_type,city,contact,plan_id,status,created_at')
+        .order('created_at', {ascending:false});
+      if (error) {
+        requestsBody.replaceChildren();
+        showNotice(dashboardNotice, 'تعذر تحميل الطلبات. تحقق من سياسات RLS وصلاحيات مدير المنصة ثم أعد المحاولة. التفاصيل: ' + error.message);
+        return;
+      }
+      currentRequests = data || [];
+      updateCounts(currentRequests);
+      renderRequests();
+    }
+    async function verifyAdminAndOpen(user) {
+      const {data: profile, error} = await client
+        .from('profiles')
+        .select('platform_role')
+        .eq('id', user.id)
+        .maybeSingle();
+      if (error || !profile || profile.platform_role !== 'platform_admin') {
+        await client.auth.signOut();
+        showLogin();
+        showNotice(loginNotice, 'هذا الحساب ليس لديه صلاحية مدير منصة سُفرة. استخدم حساب المدير الذي تم تعيين platform_admin له.');
+        return;
+      }
+      showDashboard(user);
+      await loadRequests();
+    }
+    document.getElementById('loginForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      clearNotice(loginNotice);
+      if (!client) {
+        showNotice(loginNotice, 'بيانات الاتصال غير مكتملة في ملف admin.html.');
+        return;
+      }
+      const email = document.getElementById('email').value.trim();
+	  loginBtn.disabled = true;
+loginBtn.textContent = 'جارٍ إرسال رابط الدخول...';
+
+const password = document.getElementById('password').value;
+
+loginBtn.disabled = true;
+loginBtn.textContent = 'جارٍ تسجيل الدخول...';
+
+const { data, error } = await client.auth.signInWithPassword({
+  email,
+  password
+});
+
+loginBtn.disabled = false;
+loginBtn.textContent = 'تسجيل الدخول';
+
+if (error) {
+  showNotice(loginNotice, 'فشل تسجيل الدخول: ' + error.message);
+  return;
+}
+
+await verifyAdminAndOpen(data.user);    
+});
+    forgotPasswordBtn.addEventListener('click', async () => {
+      clearNotice(loginNotice);
+      clearNotice(recoveryNotice);
+      if (!client) {
+        showNotice(loginNotice, 'بيانات الاتصال غير مكتملة في ملف admin.html.');
+        return;
+      }
+      const email = document.getElementById('email').value.trim();
+      if (!email) {
+        showNotice(loginNotice, 'اكتب بريد حساب مدير المنصة أولاً، ثم اضغط «نسيت كلمة المرور؟».');
+        document.getElementById('email').focus();
+        return;
+      }
+      forgotPasswordBtn.disabled = true;
+      forgotPasswordBtn.textContent = 'جارٍ إرسال رابط الاستعادة...';
+      const redirectTo = window.location.origin + window.location.pathname;
+      const {error} = await client.auth.resetPasswordForEmail(email, {redirectTo});
+      forgotPasswordBtn.disabled = false;
+      forgotPasswordBtn.textContent = 'نسيت كلمة المرور؟';
+      if (error) {
+        showNotice(loginNotice, 'تعذر إرسال رابط الاستعادة: ' + error.message);
+        return;
+      }
+      showNotice(loginNotice, 'إذا كان البريد مسجلاً، فسيصلك رابط استعادة كلمة المرور. افحص البريد الوارد ومجلد الرسائل غير المرغوب فيها.', 'success');
+    });
+
+    recoveryForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      clearNotice(recoveryNotice);
+      const password = document.getElementById('newPassword').value;
+      const confirmation = document.getElementById('confirmPassword').value;
+      if (password.length < 8) {
+        showNotice(recoveryNotice, 'استخدم كلمة مرور من 8 أحرف على الأقل.');
+        return;
+      }
+      if (password !== confirmation) {
+        showNotice(recoveryNotice, 'كلمتا المرور غير متطابقتين.');
+        return;
+      }
+      const saveButton = document.getElementById('savePasswordBtn');
+      saveButton.disabled = true;
+      saveButton.textContent = 'جارٍ حفظ كلمة المرور...';
+      const {error} = await client.auth.updateUser({password});
+      saveButton.disabled = false;
+      saveButton.textContent = 'حفظ كلمة المرور الجديدة';
+      if (error) {
+        showNotice(recoveryNotice, 'تعذر تغيير كلمة المرور: ' + error.message);
+        return;
+      }
+      await client.auth.signOut();
+      recoveryForm.classList.add('hidden');
+      loginForm.classList.remove('hidden');
+      forgotPasswordBtn.classList.remove('hidden');
+      document.getElementById('password').value = '';
+      showNotice(loginNotice, 'تم تغيير كلمة المرور. سجّل الدخول الآن باستخدام كلمة المرور الجديدة.', 'success');
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      await client.auth.signOut();
+      currentRequests = [];
+      showLogin();
+      clearNotice(loginNotice);
+    });
+    document.getElementById('refreshBtn').addEventListener('click', loadRequests);
+    document.getElementById('searchInput').addEventListener('input', renderRequests);
+    document.getElementById('statusFilter').addEventListener('change', renderRequests);
+    document.getElementById('planFilter').addEventListener('change', renderRequests);
+
+    async function changeRequestStatus(event) {
+      const select = event.currentTarget;
+      const requestId = select.dataset.requestId;
+      const newStatus = select.value;
+      const oldRequest = currentRequests.find(r => r.id === requestId);
+      if (!oldRequest) return;
+      const previousStatus = oldRequest.status;
+      select.disabled = true;
+      const {data, error} = await client
+        .from('restaurant_requests')
+        .update({status:newStatus})
+        .eq('id', requestId)
+        .select('id,status')
+        .maybeSingle();
+      select.disabled = false;
+      if (error || !data) {
+        select.value = previousStatus;
+        showNotice(dashboardNotice, 'لم نتمكن من تحديث حالة الطلب. تحقق من صلاحيات UPDATE وسياسة المدير.');
+        return;
+      }
+      oldRequest.status = data.status;
+      updateCounts(currentRequests);
+      renderRequests();
+      showNotice(dashboardNotice, 'تم تحديث حالة الطلب إلى: ' + statusLabels[data.status], 'success');
+    }
+
+    (function initialize() {
+      if (typeof window.supabase === 'undefined') {
+        showNotice(loginNotice, 'تعذر تحميل مكتبة Supabase. تحقق من اتصال الإنترنت ثم أعد تحميل الصفحة.');
+        return;
+      }
+      if (!SOFRA_SUPABASE_URL.startsWith('https://') || SOFRA_SUPABASE_URL.includes('PASTE_YOUR_') || !SOFRA_SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_')) {
+        showNotice(loginNotice, 'أدخل API URL والمفتاح العام في موضعيهما أعلى هذا الملف أولًا.');
+        return;
+      }
+      const normalizedProjectUrl = SOFRA_SUPABASE_URL
+  .trim()
+  .replace(/\/+$/, '')
+  .replace(/\/rest\/v1$/i, '');
+
+client = window.supabase.createClient(normalizedProjectUrl, SOFRA_SUPABASE_PUBLISHABLE_KEY, {
+        auth: {autoRefreshToken:true, persistSession:true, detectSessionInUrl:true}
+      });
+      client.auth.onAuthStateChange((event) => {
+        if (event === 'PASSWORD_RECOVERY') {
+          loginForm.classList.add('hidden');
+          forgotPasswordBtn.classList.add('hidden');
+          recoveryForm.classList.remove('hidden');
+          clearNotice(loginNotice);
+          showNotice(recoveryNotice, 'تم التحقق من رابط الاستعادة. أدخل كلمة المرور الجديدة مرتين.', 'success');
+        }
+      });
+      client.auth.getSession().then(({data, error}) => {
+        if (error) return;
+        if (data.session?.user) verifyAdminAndOpen(data.session.user);
+      });
+    })();
+  </script>
+</body>
+</html>
